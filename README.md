@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/b3d3c851-aca5-418c-915b-cd17c1c0046c)
+
 # OneBalance + Privy Demo
 
 A Next.js application showcasing integration between [OneBalance](https://onebalance.io) and [Privy](https://privy.io) for seamless chain-abstracted transactions and user authentication.
