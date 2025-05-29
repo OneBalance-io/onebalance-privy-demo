@@ -38,9 +38,11 @@ export const signQuote = async (quote: Quote, embeddedWallet: ConnectedWallet) =
   };
 
   // Sign all operations in sequence
-  signedQuote.originChainsOperations = await sequentialPromises(
-    quote.originChainsOperations.map(signWithEmbeddedWallet)
-  );
+  if (quote.originChainsOperations) {
+    signedQuote.originChainsOperations = await sequentialPromises(
+      quote.originChainsOperations.map(signWithEmbeddedWallet)
+    );
+  }
 
   if (quote.destinationChainOperation) {
     signedQuote.destinationChainOperation = await signWithEmbeddedWallet(
