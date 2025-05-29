@@ -4,6 +4,10 @@
 
 A Next.js application showcasing integration between [OneBalance](https://onebalance.io) and [Privy](https://privy.io) for seamless chain-abstracted transactions and user authentication.
 
+## Live Demo
+
+🚀 **[Try the live demo](https://onebalance-privy-demo.vercel.app)**
+
 ## Overview
 
 This demo demonstrates:
