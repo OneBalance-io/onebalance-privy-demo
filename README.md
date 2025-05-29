@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/b3d3c851-aca5-418c-915b-cd17c1c0046c)
+![OneBalancePrivyDemo](https://github.com/user-attachments/assets/6fa87a0f-b0ab-4349-98a8-219c566e0932)
 
 # OneBalance + Privy Demo
 
