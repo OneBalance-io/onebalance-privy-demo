@@ -16,7 +16,7 @@ export const API_KEY = process.env.NEXT_PUBLIC_ONEBALANCE_API_KEY;
 // Predict account address for a user based on their Privy wallet
 export async function predictAccountAddress(sessionAddress: string, adminAddress: string) {
   try {
-    const response = await apiClient.post('?endpoint=/account/predict-address', {
+    const response = await apiClient.post('/account/predict-address', {
       sessionAddress,
       adminAddress
     });
@@ -30,7 +30,7 @@ export async function predictAccountAddress(sessionAddress: string, adminAddress
 // Get aggregated balance for a smart account
 export async function getAggregatedBalance(address: string) {
   try {
-    const response = await apiClient.get(`?endpoint=/v2/balances/aggregated-balance?address=${address}`);
+    const response = await apiClient.get(`/v2/balances/aggregated-balance?address=${address}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching aggregated balance:', error);
@@ -58,7 +58,7 @@ export async function getQuote(params: {
   };
 }) {
   try {
-    const response = await apiClient.post('?endpoint=/v1/quote', params);
+    const response = await apiClient.post('/v1/quote', params);
     return response.data;
   } catch (error) {
     console.error('Error getting quote:', error);
@@ -69,7 +69,7 @@ export async function getQuote(params: {
 // Execute a quote after getting user signature
 export async function executeQuote(signedQuote: any) {
   try {
-    const response = await apiClient.post('?endpoint=/quotes/execute-quote', signedQuote);
+    const response = await apiClient.post('/quotes/execute-quote', signedQuote);
     return response.data;
   } catch (error) {
     console.error('Error executing quote:', error);
@@ -80,7 +80,7 @@ export async function executeQuote(signedQuote: any) {
 // Check transaction status
 export async function checkTransactionStatus(quoteId: string) {
   try {
-    const response = await apiClient.get(`?endpoint=/status/get-execution-status?quoteId=${quoteId}`);
+    const response = await apiClient.get(`/status/get-execution-status?quoteId=${quoteId}`);
     return response.data;
   } catch (error) {
     console.error('Error checking transaction status:', error);
