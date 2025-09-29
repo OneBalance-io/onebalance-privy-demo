@@ -156,13 +156,13 @@ export default function Dashboard() {
             accountAddress: accountAddress,
           },
           asset: {
-            assetId: swapDirection === 'USDC_TO_ETH' ? 'ds:usdc' : 'ds:eth',
+            assetId: swapDirection === 'USDC_TO_ETH' ? 'ob:usdc' : 'ob:eth',
           },
           amount,
         },
         to: {
           asset: {
-            assetId: swapDirection === 'USDC_TO_ETH' ? 'ds:eth' : 'ds:usdc',
+            assetId: swapDirection === 'USDC_TO_ETH' ? 'ob:eth' : 'ob:usdc',
           },
         },
       };
@@ -198,12 +198,12 @@ export default function Dashboard() {
       
       // Find USDC in the balance data
       const usdcAsset = balanceData.balanceByAggregatedAsset.find(
-        (asset: any) => asset.aggregatedAssetId === 'ds:usdc'
+        (asset: any) => asset.aggregatedAssetId === 'ob:usdc'
       );
       
       // Find ETH in the balance data
       const ethAsset = balanceData.balanceByAggregatedAsset.find(
-        (asset: any) => asset.aggregatedAssetId === 'ds:eth'
+        (asset: any) => asset.aggregatedAssetId === 'ob:eth'
       );
       
       if (usdcAsset) {
@@ -347,13 +347,13 @@ export default function Dashboard() {
               accountAddress: accountAddress,
             },
             asset: {
-              assetId: swapDirection === 'USDC_TO_ETH' ? 'ds:usdc' : 'ds:eth',
+              assetId: swapDirection === 'USDC_TO_ETH' ? 'ob:usdc' : 'ob:eth',
             },
             amount,
           },
           to: {
             asset: {
-              assetId: swapDirection === 'USDC_TO_ETH' ? 'ds:eth' : 'ds:usdc',
+              assetId: swapDirection === 'USDC_TO_ETH' ? 'ob:eth' : 'ob:usdc',
             },
           },
         };
